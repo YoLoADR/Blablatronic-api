@@ -1,0 +1,29 @@
+{
+	"name": "blablatronic-api",
+	"version": "1.0.0",
+	"description": "Download email template",
+	"main": "server.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/YoLoADR/Blablatronic-api.git"
+	},
+	"author": "Yohann Atticot",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/YoLoADR/Blablatronic-api/issues"
+	},
+	"homepage": "https://github.com/YoLoADR/Blablatronic-api#readme",
+	"dependencies": {
+		"body-parser": "^1.18.3",
+		"cors": "^2.8.5",
+		"express": "^4.16.4",
+		"http": "0.0.0",
+		"mongoose": "^5.4.11",
+		"morgan": "^1.9.1",
+		"babel-jest": "20.0.3",
+		"babel-loader": "7.1.2"
+	}
+}
