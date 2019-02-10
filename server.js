@@ -7,6 +7,7 @@ const http = require('http')
 const cors = require('cors')
 const mongoose = require('mongoose')
 mongoose.connect('mongodb://root:abc123@ds127535.mlab.com:27535/blablatronic', { useNewUrlParser: true })
+mongoose.set('useCreateIndex', true)
 mongoose.connection
 	.once('open', () => console.log('Connecté à MongoLab'))
 	.on('error', error => console.log('Erreur de connexion à la DB', error))

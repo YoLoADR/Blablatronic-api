@@ -9,3 +9,12 @@ https://www.plezi.co/fr/quelle-difference-entre-lead-et-prospect/
 Lead : Interet et problomatique reconnu (simple contact)
 Propect : Réponse au besoin en cours
 Client : Vente réalisée
+
+Postman
+Method : POST
+URL : localhost:3003/categories/add-category
+Headers : key = Content-Type  / value = application/x-www-form-urlencoded
+Body : raw
+{
+     "name":"lead"
+}

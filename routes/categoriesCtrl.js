@@ -9,18 +9,6 @@ router.get('/', function(req, res, next) {
 	})
 })
 
-router.get('/add-category', function(req, res, next) {
-	res.json({ message: 'success' })
-})
-
-//Postman
-//Method : POST
-//URL : localhost:3003/categories/add-category
-//Headers : key = Content-Type  / value = application/x-www-form-urlencoded
-//Body : raw
-// {
-//     "name":"lead"
-// }
 router.post('/add-category', function(req, res, next) {
 	const name = req.body.name
 	const category = new Category({
