@@ -2,7 +2,7 @@ var router = require('express').Router()
 var Category = require('../models/category')
 
 //CATEGORIES
-router.get('/', function(req, res, next) {
+router.get('/shows', function(req, res, next) {
 	Category.find(function(err, categories) {
 		if (err) return next(err)
 		return res.status(200).json({ categories: categories })

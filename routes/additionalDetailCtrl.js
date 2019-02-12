@@ -3,7 +3,7 @@ const AdditionalDetail = require('../models/additionalDetail')
 var Category = require('../models/category')
 
 //SCENANIO
-router.get('/', function(req, res, next) {
+router.get('/shows', function(req, res, next) {
 	AdditionalDetail.find(function(err, additionalDetail) {
 		if (err) return next(err)
 		return res.status(200).json({ additionalDetails: AdditionalDetail })
