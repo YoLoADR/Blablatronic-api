@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-var ScenarioSchema = new Schema({
+var AdditionalDetailSchema = new Schema({
 	category: [{ type: Schema.Types.ObjectId, ref: 'Category' }],
 	storyline: { type: String, unique: true },
 	description: { type: String, default: '' },
@@ -10,4 +10,4 @@ var ScenarioSchema = new Schema({
 	formulation: { type: String, default: 'Formal' }
 })
 
-module.exports = mongoose.model('Scenario', ScenarioSchema)
+module.exports = mongoose.model('AdditionalDetail', AdditionalDetailSchema)

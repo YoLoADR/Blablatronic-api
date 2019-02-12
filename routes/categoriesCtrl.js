@@ -9,7 +9,7 @@ router.get('/', function(req, res, next) {
 	})
 })
 
-router.post('/add-category', function(req, res, next) {
+router.post('/create', function(req, res, next) {
 	const name = req.body.name
 	const category = new Category({
 		name: name

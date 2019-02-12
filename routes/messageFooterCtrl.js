@@ -1,12 +1,12 @@
 const router = require('express').Router()
-const Scenario = require('../models/scenario')
+const MessageFooter = require('../models/messageFooter')
 var Category = require('../models/category')
 
 //SCENANIO
 router.get('/', function(req, res, next) {
-	Scenario.find(function(err, scenarios) {
+	MessageFooter.find(function(err, messageFooter) {
 		if (err) return next(err)
-		return res.status(200).json({ scenarios: scenarios })
+		return res.status(200).json({ messageFooters: messageFooter })
 	})
 })
 
@@ -16,7 +16,7 @@ router.post('/create', function(req, res, next) {
 		.exec(function(err, category) {
 			if (err) return next(err)
 
-			const scenario = new Scenario({
+			const messageFooter = new MessageFooter({
 				storyline: req.body.storyline,
 				description: req.body.description,
 				language: req.body.language,
@@ -24,9 +24,9 @@ router.post('/create', function(req, res, next) {
 				category: [category._id]
 			})
 
-			scenario.save(function(err) {
+			messageFooter.save(function(err) {
 				if (err) return next(err)
-				res.status(200).json({ status: 'Successfully added a scenario' })
+				res.status(200).json({ status: 'Successfully added a messageFooter' })
 			})
 		})
 })
